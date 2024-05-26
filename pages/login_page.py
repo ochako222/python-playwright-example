@@ -7,6 +7,8 @@ class LoginPage:
     def __init__(self, page):
         self.page = page
         self.user_name_input = page.locator("[name='username']")
+
+    self.search_button = page.locator('#search_button_homepage')
     
     @property
     def password_input(self):
