@@ -6,10 +6,7 @@ from objects.types import User
 class LoginPage:
     def __init__(self, page):
         self.page = page
-    
-    @property 
-    def user_name_input(self):
-        return self.page.locator("[name='username']")
+        self.user_name_input = page.locator("[name='username']")
     
     @property
     def password_input(self):
