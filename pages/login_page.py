@@ -1,4 +1,3 @@
-from playwright.sync_api import Page
 from playwright.sync_api import expect
 from global_config.types import User
 
@@ -8,19 +7,10 @@ class LoginPage:
         self.page = page
         self.user_name_input = page.locator("[name='username']")
         self.search_button = page.locator('#search_button_homepage')
-    
-    @property
-    def password_input(self):
-        return self.page.locator("[name='password']")
-    
-        
-    @property
-    def continue_button(self):
-        return self.page.locator("[data-testid='username-check-button']")
-    
-    @property
-    def sign_in_button(self):
-        return self.page.locator("[data-testid='login-submit-button']")
+        self.password_input=page.locator("[name='password']")
+        self.continue_button=page.locator("[data-testid='username-check-button']")
+        self.sign_in_button=page.locator("[data-testid='login-submit-button']")
+
     
     def wait_page_loaded(self):
         expect(self.user_name_input).to_be_visible()
