@@ -4,8 +4,7 @@ from pages.home_page import HomePage
 from pages.login_page import LoginPage
 from playwright.sync_api import Page
 
-from global_config.config import base_url
-from global_config.config import user
+from global_config.config import user, base_url
 
    
 def test_valid_login(page: Page)-> None:

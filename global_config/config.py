@@ -1,8 +1,9 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv,dotenv_values
 from os.path import join, dirname
 import os
 
 from global_config.types import User
+
 
 def load_config():
     environment = os.getenv('ENV', 'qa')  # Default to 'dev' if ENV is not set
@@ -18,9 +19,10 @@ def load_config():
 
 load_config()
 
-base_url = os.getenv("BASE_URL")
-user_name = os.getenv("USER_NAME")
-user_password = os.getenv("USER_PASSWORD")
+
+base_url = os.getenv("BASE_URL", 'NONE')
+user_name = os.getenv("USER_NAME",'NONE')
+user_password = os.getenv("USER_PASSWORD",'NONE')
 
 if user_name and user_password:
     user = User(user_name=user_name,password=user_password)
