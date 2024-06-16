@@ -8,7 +8,7 @@ trigger:
 
 
 pool:
-  vmImage: unbuntu-latest
+  vmImage: 'Ubuntu-16.04'
 
 steps:
 - script: echo Hello, world!
