@@ -1,5 +1,6 @@
 from pages import PortalPages
 from playwright.sync_api import Page
+from playwright.sync_api import expect
 
 from global_config.config import user, base_url
 
@@ -17,8 +18,10 @@ def test_valid_login(page: Page)-> None:
     portal.home_page.navbar.click_on_link_by_name('Documents')
 
     portal.documents_page.wait_page_loaded()
-
     page.pause()
+    portal.documents_page.navigate_to_folder('AUTOMATION_COURSES')
+    page.pause()
+
 
 
 

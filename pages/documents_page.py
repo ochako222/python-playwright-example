@@ -13,3 +13,11 @@ class DocumentsPage(BasePage):
     def wait_page_loaded(self):
         self.wait_for_array_elements([self.addDocumentButton, self.addFolderButton,self.serachDocumentInput,self.documentsTable])
       
+    def navigate_to_folder(self,folder_name:str)->None:
+        with self.page.expect_response("https://core3.qa.bravais.com/api/v3/folders/root/**") as response:
+            self.serachDocumentInput.fill(folder_name)
+        assert response.value.ok
+
+        self.page.locator(f'a:has-text("{folder_name}")').click()
+
+
