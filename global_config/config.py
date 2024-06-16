@@ -1,16 +1,14 @@
-from dotenv import load_dotenv,dotenv_values
-from os.path import join, dirname
+from dotenv import load_dotenv
 import os
 
 from global_config.types import User
 
-
 def load_config():
-    environment = os.getenv('ENV', 'qa')  # Default to 'dev' if ENV is not set
+    environment = os.getenv('ENV', 'qa')  # Default to 'qa' if ENV is not set
     if environment == 'qa':
-        dotenv_path = os.path.join(os.path.dirname(__file__), '.env.qa')
+        dotenv_path = os.path.join(os.path.dirname(__file__), '.qa.env')
     elif environment == 'beta':
-        dotenv_path = os.path.join(os.path.dirname(__file__), '.env.beta')
+        dotenv_path = os.path.join(os.path.dirname(__file__), '.beta.env')
     else:
         raise ValueError(f"Unknown environment: {environment}")
     
@@ -20,7 +18,7 @@ def load_config():
 load_config()
 
 
-base_url = os.getenv("BASE_URL", 'NONE')
+base_url = os.getenv("PORTAL_URL", 'NONE')
 user_name = os.getenv("USER_NAME",'NONE')
 user_password = os.getenv("USER_PASSWORD",'NONE')
 

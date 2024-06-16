@@ -3,7 +3,7 @@ from pages.home_page import HomePage
 from pages.login_page import LoginPage
 
 
-class StudioPages:
+class PortalPages:
     def __init__(self, page):
         self.documents_page = DocumentsPage(page)
         self.login_page = LoginPage(page)

@@ -1,15 +1,18 @@
 from playwright.sync_api import expect
+from pages.navbar_element import Navbar
 
-from pages.left_navbar import LeftNavbar
 
 class HomePage:
     def __init__(self, page):
         self.page = page
-        self.left_navbar = LeftNavbar(page)
+        self.navbar = Navbar(page)
+        self.favoritesContainer = page.locator(".home-favorites")
+        self.latestUpdates = page.locator('[data-cy="home-latest-section"]')
+        self.recentDocuments = page.locator('[data-cy="home-recent-section"]')
     
     def wait_page_loaded(self):
-        expect(self.page.locator("[data-testid='header']")).to_be_visible()
-        expect(self.page.locator("img[data-testid='header-logo-img']")).to_be_visible()
-        expect(self.page.locator("button[data-testid='header-avatar']")).to_be_visible()
+        expect(self.favoritesContainer).to_be_visible()
+        expect(self.latestUpdates).to_be_visible()
+        expect(self.recentDocuments).to_be_visible()
 
     
