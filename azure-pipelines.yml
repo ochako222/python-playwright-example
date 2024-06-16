@@ -14,6 +14,6 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run one-line script'
 - script: pip install -r requirements.txt
-displayName: 'Install dependencies'
+  displayName: 'Install dependencies'
 - script: make ui.qa
-displayName: 'Run test'
+  displayName: 'Run test'
