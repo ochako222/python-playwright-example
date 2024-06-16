@@ -17,5 +17,5 @@ steps:
   displayName: 'Install dependencies'
 - script: playwright install
   displayName: 'Install playwright'
-- script: make ui.qa
+- script: make headless
   displayName: 'Run test'
