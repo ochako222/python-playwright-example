@@ -45,3 +45,5 @@ or use existed `Makefile` script:
 ```bash
 make foo
 ```
+
+## Azure DevOps integration
