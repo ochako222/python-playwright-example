@@ -15,5 +15,7 @@ steps:
   displayName: 'Run one-line script'
 - script: pip install -r requirements.txt
   displayName: 'Install dependencies'
+- script: playwright install
+  displayName: 'Install playwright'
 - script: make ui.qa
   displayName: 'Run test'
