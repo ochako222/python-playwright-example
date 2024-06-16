@@ -20,9 +20,6 @@ def test_valid_login(page: Page)-> None:
     portal.documents_page.wait_page_loaded()
     page.pause()
     portal.documents_page.navigate_to_folder('AUTOMATION_COURSES')
-    page.pause()
-
-
 
 
 
