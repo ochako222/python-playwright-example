@@ -7,4 +7,4 @@ ui.qa.debug:
 ui.beta:
 	ENV=beta pytest --headed -s 
 single:
-	pytest test_login.py
+	pytest tests/test_documents.py --headed

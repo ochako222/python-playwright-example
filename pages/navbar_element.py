@@ -4,7 +4,6 @@ from typing import Literal, Optional,Union
 Links = Literal['Documents', 'Users', 'Settings']
 
 Users = Literal['Users','Groups']
-
 Settings = Literal['Preferences', 'Classifications']
 
 class Navbar:

@@ -7,6 +7,7 @@ class LoginPage:
         self.user_name_input = page.locator("#username")
         self.password_input=page.locator("#password")
         self.sign_in_button=page.locator("#submitBtn")
+        self.alert_message = page.locator('#login-submit-form .alert')
 
     def wait_page_loaded(self):
         expect(self.user_name_input).to_be_visible()
@@ -17,5 +18,7 @@ class LoginPage:
         self.user_name_input.fill(user["user_name"])
         self.password_input.fill(user["password"])
         self.sign_in_button.click()
+
+
 
 
