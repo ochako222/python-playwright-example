@@ -3,4 +3,4 @@ env
 .pytest_cache
 .DS_Store
 
-tests/__pycache__
+tests/__pycache__/
