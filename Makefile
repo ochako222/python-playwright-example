@@ -1,8 +1,11 @@
 reporter = --html-report=./report/report.html
+
 headless:
 	pytest -s $(reporter)
 single:
-	pytest tests/test_login.py -s $(reporter)
+	pytest tests/test_login.py --headed -s $(reporter)
+debug:
+	PWDEBUG=1 pytest tests/test_login.py --headed -s $(reporter)
 ui.qa:
 	ENV=qa pytest --headed -s
 ui.qa.debug:
