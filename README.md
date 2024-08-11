@@ -34,6 +34,12 @@ pip install -r requirements.txt
 ```
 We installed `request` inside the Python virtual environment
 
+This project use playwright, when you launch tests first time, don't forget to launch installation first:
+
+```bash
+playwright install
+```
+
 Now to launch existed tests we can run command:
 
 ```bash
@@ -43,7 +49,7 @@ python -m pytest
 or use existed `Makefile` script:
 
 ```bash
-make foo
+make single
 ```
 
 ## Azure DevOps integration
