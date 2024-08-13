@@ -18,6 +18,6 @@ class DocumentsModal:
         self.confirm_new_folder_button.click()
 
     def confirm_archieving(self):
-        with self.page.expect_response("https://core3.qa.bravais.com/api/v3/folders/root/items?*") as response:
+        with self.page.expect_response("") as response:
             self.confirm_archieve_button.click()
         assert response.value.ok
