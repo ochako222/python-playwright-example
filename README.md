@@ -22,11 +22,6 @@ In case to deactivate python environment, type:
 deactivate
 ```
 
-Create project structure
-```bash
-mkdir -p config source test utils && touch main.py requirements.txt config/__init__.py source/__init__.py test/__init__.py utils/__init__.py
-```
-
 Now we have the project structure and we can install the first libraries
 ```bash
 echo -e "requests\npytest" > requirements.txt
@@ -52,4 +47,9 @@ or use existed `Makefile` script:
 make single
 ```
 
-## Azure DevOps integration
+## Create .env file
+```bash
+PORTAL_URL=
+USER_NAME=
+USER_PASSWORD=
+```
